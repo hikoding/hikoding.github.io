@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
+<html lang="ko,en,default" data-default-color-scheme=auto>
 
 
 
@@ -13,19 +13,18 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="">
   <meta name="keywords" content="">
   
     <meta name="description" content="Terminal에서 webpack 사용하기webpack, webpack-cli 설치npm을 통해 webpack과 webpack-cli 설치가 필요합니다. 1npm i -g webpack webpack-cli  production 모드로 build하기–mode production 를 추가해주면 됩니다.하지만 기본값이므로 생략 가능합니다. 1webpack .&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Terminal에서 webpack 사용하기">
-<meta property="og:url" content="http://example.com/2022/10/06/JavaScript/Webpack/webpack-cli/index.html">
+<meta property="og:url" content="https://hikoding.github.io/2022/10/06/JavaScript/Webpack/webpack-cli/index.html">
 <meta property="og:site_name" content="NOTE WEB">
 <meta property="og:description" content="Terminal에서 webpack 사용하기webpack, webpack-cli 설치npm을 통해 webpack과 webpack-cli 설치가 필요합니다. 1npm i -g webpack webpack-cli  production 모드로 build하기–mode production 를 추가해주면 됩니다.하지만 기본값이므로 생략 가능합니다. 1webpack .&#x2F;">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2022-10-06T10:42:43.000Z">
 <meta property="article:modified_time" content="2022-10-07T16:03:59.317Z">
-<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Webpack">
 <meta name="twitter:card" content="summary_large_image">
@@ -66,11 +65,15 @@
 
 
 
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"hikoding.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -209,7 +212,7 @@
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-10-06 19:42" pubdate>
-          October 6, 2022 pm
+          2022년 10월 6일 오후
         </time>
       </span>
     
@@ -420,19 +423,14 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Terminal에서 webpack 사용하기</div>
-      <div>http://example.com/2022/10/06/JavaScript/Webpack/webpack-cli/</div>
+      <div>https://hikoding.github.io/2022/10/06/JavaScript/Webpack/webpack-cli/</div>
     </div>
     <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>Author</div>
-          <div>John Doe</div>
-        </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>October 6, 2022</div>
+          <div>2022년 10월 6일</div>
         </div>
       
       
@@ -463,6 +461,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/10/09/Python/01.%20Python%20%EC%8B%9C%EC%9E%91/01.%20python%20%EC%86%8C%EA%B0%9C%ED%95%98%EA%B8%B0/" title="01. python 소개하기">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">01. python 소개하기</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
