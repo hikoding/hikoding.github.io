@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="제네릭뷰와 mixin을 사용하여 좀 더 간결하게 사용할 수 있습니다. views 파일을 수정해줍니다. 1234567891011121314151617181920212223242526272829# &amp;#x27;api_basic&#x2F;views.py&amp;#x27;from .serializers import ArticleSerializerfrom rest_framework">
+    <meta name="description" content="제네릭뷰와 mixin을 사용하여 좀 더 간결하게 사용할 수 있습니다. views 파일을 수정해줍니다. # &amp;#x27;api_basic&#x2F;views.py&amp;#x27;  from .serializers import ArticleSerializer from rest_framework import generics, mixins from .models import Ar">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django Rest Framework 5 (제네릭뷰와 mixin)">
 <meta property="og:url" content="https://hikoding.github.io/2022/10/06/Before/Python/Django/RestFramework/DRF5/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="제네릭뷰와 mixin을 사용하여 좀 더 간결하게 사용할 수 있습니다. views 파일을 수정해줍니다. 1234567891011121314151617181920212223242526272829# &amp;#x27;api_basic&#x2F;views.py&amp;#x27;from .serializers import ArticleSerializerfrom rest_framework">
+<meta property="og:description" content="제네릭뷰와 mixin을 사용하여 좀 더 간결하게 사용할 수 있습니다. views 파일을 수정해줍니다. # &amp;#x27;api_basic&#x2F;views.py&amp;#x27;  from .serializers import ArticleSerializer from rest_framework import generics, mixins from .models import Ar">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2022-10-06T09:54:38.300Z">
 <meta property="article:modified_time" content="2022-10-07T15:52:50.533Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k words
+          940 words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          9 mins
+          8 mins
         
       </span>
     
@@ -805,11 +805,48 @@
                 
                 <p>제네릭뷰와 mixin을 사용하여 좀 더 간결하게 사용할 수 있습니다.</p>
 <p>views 파일을 수정해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span><br><br><span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer<br><span class="hljs-keyword">from</span> rest_framework <span class="hljs-keyword">import</span> generics, mixins<br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article<br><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericAPIView</span>(generics.GenericAPIView, mixins.ListModelMixin, <br>    mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin,<br>    mixins.DestroyModelMixin):<br>    serializer_class = ArticleSerializer<br>    queryset = Article.objects.<span class="hljs-built_in">all</span>()<br><br>    lookup_field = <span class="hljs-string">&#x27;id&#x27;</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span></span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">id</span>:<br>            <span class="hljs-keyword">return</span> self.retrieve(request)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">list</span>(request)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">post</span>(<span class="hljs-params">self, request</span>):<br>        <span class="hljs-keyword">return</span> self.create(request)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">put</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span></span>):<br>        <span class="hljs-keyword">return</span> self.update(request, <span class="hljs-built_in">id</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">delete</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span></span>):<br>        <span class="hljs-keyword">return</span> self.destroy(request, <span class="hljs-built_in">id</span>)<br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer
+<span class="hljs-keyword">from</span> rest_framework <span class="hljs-keyword">import</span> generics, mixins
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article
+
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">GenericAPIView</span>(generics.GenericAPIView, mixins.ListModelMixin, 
+    mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin,
+    mixins.DestroyModelMixin):
+    serializer_class = ArticleSerializer
+    queryset = Article.objects.<span class="hljs-built_in">all</span>()
+
+    lookup_field = <span class="hljs-string">&#x27;id&#x27;</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-keyword">if</span> <span class="hljs-built_in">id</span>:
+            <span class="hljs-keyword">return</span> self.retrieve(request)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> self.<span class="hljs-built_in">list</span>(request)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">post</span>(<span class="hljs-params">self, request</span>):
+        <span class="hljs-keyword">return</span> self.create(request)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">put</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span>=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-keyword">return</span> self.update(request, <span class="hljs-built_in">id</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">delete</span>(<span class="hljs-params">self, request, <span class="hljs-built_in">id</span></span>):
+        <span class="hljs-keyword">return</span> self.destroy(request, <span class="hljs-built_in">id</span>)</code></pre></div>
 
 
 <p>urls.py 도 함께 수정해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/urls.py&#x27;</span><br><br><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path<br><span class="hljs-keyword">from</span> .views <span class="hljs-keyword">import</span> GenericAPIView<br><br><br>urlpatterns = [<br>    path(<span class="hljs-string">&#x27;generic/article/&#x27;</span>, GenericAPIView.as_view()),<br>    path(<span class="hljs-string">&#x27;generic/article/&lt;int:id&gt;/&#x27;</span>, GenericAPIView.as_view()),<br>]<br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/urls.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+<span class="hljs-keyword">from</span> .views <span class="hljs-keyword">import</span> GenericAPIView
+
+
+urlpatterns = [
+    path(<span class="hljs-string">&#x27;generic/article/&#x27;</span>, GenericAPIView.as_view()),
+    path(<span class="hljs-string">&#x27;generic/article/&lt;int:id&gt;/&#x27;</span>, GenericAPIView.as_view()),
+]</code></pre></div>
 
                 
               </div>
@@ -919,8 +956,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/02/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2019/10/28/Before/Javascript/Node/01.%20%ED%8C%8C%EC%9D%BC%EC%9D%B4%EB%A6%84%20%ED%8C%8C%EC%9D%BC%EA%B2%BD%EB%A1%9C%20%EC%95%8C%EC%95%84%EB%82%B4%EA%B8%B0/" title="01. 파일이름, 파일경로 알아내기">
+                        <span class="hidden-mobile">01. 파일이름, 파일경로 알아내기</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

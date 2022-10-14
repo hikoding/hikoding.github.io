@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="prototype 사용하기 1234567891011121314151617181920&#x2F;&#x2F; prototype 사용하기var person1 &#x3D; &amp;#123; name: &amp;#x27;홍길동1&amp;#x27;, age: 21 &amp;#125;var person2 &#x3D; &amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 22 &amp;#125;function Person(nam">
+    <meta name="description" content="prototype 사용하기 &#x2F;&#x2F; prototype 사용하기  var person1 &#x3D; &amp;#123; name: &amp;#x27;홍길동1&amp;#x27;, age: 21 &amp;#125; var person2 &#x3D; &amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 22 &amp;#125;  function Person(name, age) &amp;#123;     this.na">
 <meta property="og:type" content="article">
 <meta property="og:title" content="16. prototype 사용하기">
 <meta property="og:url" content="https://hikoding.github.io/2019/10/28/Before/Javascript/Node/16.%20prototype%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="prototype 사용하기 1234567891011121314151617181920&#x2F;&#x2F; prototype 사용하기var person1 &#x3D; &amp;#123; name: &amp;#x27;홍길동1&amp;#x27;, age: 21 &amp;#125;var person2 &#x3D; &amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 22 &amp;#125;function Person(nam">
+<meta property="og:description" content="prototype 사용하기 &#x2F;&#x2F; prototype 사용하기  var person1 &#x3D; &amp;#123; name: &amp;#x27;홍길동1&amp;#x27;, age: 21 &amp;#125; var person2 &#x3D; &amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 22 &amp;#125;  function Person(name, age) &amp;#123;     this.na">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2019-10-27T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-07T16:01:02.344Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          456 words
+          423 words
         
       </span>
     
@@ -804,9 +804,29 @@
               <div class="markdown-body">
                 
                 <p>prototype 사용하기</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// prototype 사용하기</span><br><br><span class="hljs-keyword">var</span> person1 = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동1&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">21</span> &#125;<br><span class="hljs-keyword">var</span> person2 = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동2&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">22</span> &#125;<br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params">name, age</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = age<br>&#125;<br><br><span class="hljs-title class_">Person</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">walk</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">speed</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(speed + <span class="hljs-string">&#x27;km 속도로 걸어갑니다.&#x27;</span>)<br>&#125;<br><br><span class="hljs-keyword">var</span> person3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;홍길동3&#x27;</span>, <span class="hljs-number">23</span>)<br><span class="hljs-keyword">var</span> person4 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;홍길동4&#x27;</span>, <span class="hljs-number">24</span>)<br><br>person3.<span class="hljs-title function_">walk</span>(<span class="hljs-number">10</span>)<br>person4.<span class="hljs-title function_">walk</span>(<span class="hljs-number">20</span>)<br><br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// prototype 사용하기</span>
 
-<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang"><span class="hljs-number">10</span>km 속도로 걸어갑니다.<br><span class="hljs-number">20</span>km 속도로 걸어갑니다.<br></code></pre></td></tr></table></figure>
+<span class="hljs-keyword">var</span> person1 = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동1&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">21</span> &#125;
+<span class="hljs-keyword">var</span> person2 = &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동2&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">22</span> &#125;
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">Person</span>(<span class="hljs-params">name, age</span>) &#123;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = age
+&#125;
+
+<span class="hljs-title class_">Person</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">walk</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">speed</span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(speed + <span class="hljs-string">&#x27;km 속도로 걸어갑니다.&#x27;</span>)
+&#125;
+
+<span class="hljs-keyword">var</span> person3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;홍길동3&#x27;</span>, <span class="hljs-number">23</span>)
+<span class="hljs-keyword">var</span> person4 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-string">&#x27;홍길동4&#x27;</span>, <span class="hljs-number">24</span>)
+
+person3.<span class="hljs-title function_">walk</span>(<span class="hljs-number">10</span>)
+person4.<span class="hljs-title function_">walk</span>(<span class="hljs-number">20</span>)
+</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs erlang"><span class="hljs-number">10</span>km 속도로 걸어갑니다.
+<span class="hljs-number">20</span>km 속도로 걸어갑니다.</code></pre></div>
 
                 
               </div>
@@ -899,9 +919,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/14.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20slice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="14. 배열에서 slice 사용하기">
+                      <a href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" title="15. callback 함수">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">14. 배열에서 slice 사용하기</span>
+                        <span class="hidden-mobile">15. callback 함수</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -909,8 +929,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="18. 이벤트 사용하기">
-                        <span class="hidden-mobile">18. 이벤트 사용하기</span>
+                      <a href="/2019/10/28/Before/Javascript/Node/13.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20splice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="13. 배열에서 splice 사용하기">
+                        <span class="hidden-mobile">13. 배열에서 splice 사용하기</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

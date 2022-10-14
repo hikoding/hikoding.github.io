@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="앞에서 사용되었던 JsonReponse, status 대신Rest Framework 에서 제공되는 Response, status로 사용 할 수 있습니다. views 파일을 수정해줍니다. 123456789101112131415161718192021222324252627282930313233343536373839404142434445# &amp;#x27;api_bas">
+    <meta name="description" content="앞에서 사용되었던 JsonReponse, status 대신Rest Framework 에서 제공되는 Response, status로 사용 할 수 있습니다. views 파일을 수정해줍니다. # &amp;#x27;api_basic&#x2F;views.py&amp;#x27;  from .serializers import ArticleSerializer from rest_framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django Rest Framework 3 (Response, status)">
 <meta property="og:url" content="https://hikoding.github.io/2022/10/06/Before/Python/Django/RestFramework/DRF3/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="앞에서 사용되었던 JsonReponse, status 대신Rest Framework 에서 제공되는 Response, status로 사용 할 수 있습니다. views 파일을 수정해줍니다. 123456789101112131415161718192021222324252627282930313233343536373839404142434445# &amp;#x27;api_bas">
+<meta property="og:description" content="앞에서 사용되었던 JsonReponse, status 대신Rest Framework 에서 제공되는 Response, status로 사용 할 수 있습니다. views 파일을 수정해줍니다. # &amp;#x27;api_basic&#x2F;views.py&amp;#x27;  from .serializers import ArticleSerializer from rest_framework">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2022-10-06T09:54:38.342Z">
 <meta property="article:modified_time" content="2022-10-07T15:52:50.533Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k words
+          1.4k words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          13 mins
+          12 mins
         
       </span>
     
@@ -805,7 +805,51 @@
                 
                 <p>앞에서 사용되었던 JsonReponse, status 대신<br>Rest Framework 에서 제공되는 Response, status로 사용 할 수 있습니다.</p>
 <p>views 파일을 수정해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span><br><br><span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer<br><span class="hljs-keyword">from</span> rest_framework.decorators <span class="hljs-keyword">import</span> api_view<br><span class="hljs-keyword">from</span> rest_framework.response <span class="hljs-keyword">import</span> Response<br><span class="hljs-keyword">from</span> rest_framework <span class="hljs-keyword">import</span> status<br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article<br><br><br><span class="hljs-meta">@api_view(<span class="hljs-params">[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>]</span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">article_list</span>(<span class="hljs-params">request</span>):<br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        articles = Article.objects.<span class="hljs-built_in">all</span>()<br>        serializer = ArticleSerializer(articles, many=<span class="hljs-literal">True</span>)<br>        <span class="hljs-keyword">return</span> Response(serializer.data)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:<br>        serializer = ArticleSerializer(data=request.data)<br>        <span class="hljs-keyword">if</span> serializer.is_valid():<br>            serializer.save()<br>            <span class="hljs-keyword">return</span> Response(serializer.data, status=status.HTTP_201_CREATED)<br>        <span class="hljs-keyword">return</span> Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)<br><br><br><span class="hljs-meta">@api_view(<span class="hljs-params">[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;PUT&#x27;</span>, <span class="hljs-string">&#x27;DELETE&#x27;</span>]</span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">article_detail</span>(<span class="hljs-params">request, pk</span>):<br>    <span class="hljs-keyword">try</span>:<br>        article = Article.objects.get(pk=pk)<br>    <span class="hljs-keyword">except</span> Article.DoesNotExist:<br>        <span class="hljs-keyword">return</span> Response(status=status.HTTP_404_NOT_FOUND)<br><br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        serializer = ArticleSerializer(article)<br>        <span class="hljs-keyword">return</span> Response(serializer.data)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;PUT&#x27;</span>:<br>        serializer = ArticleSerializer(article, data=request.data)<br>        <span class="hljs-keyword">if</span> serializer.is_valid():<br>            serializer.save()<br>            <span class="hljs-keyword">return</span> Response(serializer.data)<br>        <span class="hljs-keyword">return</span> Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;DELETE&#x27;</span>:<br>        article.delete()<br>        <span class="hljs-keyword">return</span> Response(status=status.HTTP_204_NO_CONTENT)<br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer
+<span class="hljs-keyword">from</span> rest_framework.decorators <span class="hljs-keyword">import</span> api_view
+<span class="hljs-keyword">from</span> rest_framework.response <span class="hljs-keyword">import</span> Response
+<span class="hljs-keyword">from</span> rest_framework <span class="hljs-keyword">import</span> status
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article
+
+
+<span class="hljs-meta">@api_view(<span class="hljs-params">[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>]</span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">article_list</span>(<span class="hljs-params">request</span>):
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:
+        articles = Article.objects.<span class="hljs-built_in">all</span>()
+        serializer = ArticleSerializer(articles, many=<span class="hljs-literal">True</span>)
+        <span class="hljs-keyword">return</span> Response(serializer.data)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:
+        serializer = ArticleSerializer(data=request.data)
+        <span class="hljs-keyword">if</span> serializer.is_valid():
+            serializer.save()
+            <span class="hljs-keyword">return</span> Response(serializer.data, status=status.HTTP_201_CREATED)
+        <span class="hljs-keyword">return</span> Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+
+
+<span class="hljs-meta">@api_view(<span class="hljs-params">[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;PUT&#x27;</span>, <span class="hljs-string">&#x27;DELETE&#x27;</span>]</span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">article_detail</span>(<span class="hljs-params">request, pk</span>):
+    <span class="hljs-keyword">try</span>:
+        article = Article.objects.get(pk=pk)
+    <span class="hljs-keyword">except</span> Article.DoesNotExist:
+        <span class="hljs-keyword">return</span> Response(status=status.HTTP_404_NOT_FOUND)
+
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:
+        serializer = ArticleSerializer(article)
+        <span class="hljs-keyword">return</span> Response(serializer.data)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;PUT&#x27;</span>:
+        serializer = ArticleSerializer(article, data=request.data)
+        <span class="hljs-keyword">if</span> serializer.is_valid():
+            serializer.save()
+            <span class="hljs-keyword">return</span> Response(serializer.data)
+        <span class="hljs-keyword">return</span> Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;DELETE&#x27;</span>:
+        article.delete()
+        <span class="hljs-keyword">return</span> Response(status=status.HTTP_204_NO_CONTENT)</code></pre></div>
 
                 
               </div>

@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Serializer를 ModelSerializer로 변경하면 좀 더 간단하게 구현 할 수 있습니다. 아래와 같이 수정합니다. 123456# &amp;#x27;api_basic&#x2F;serializers.py&amp;#x27;class ArticleSerializer(serializers.ModelSerializer):    class Meta:        model &#x3D; Ar">
+    <meta name="description" content="Serializer를 ModelSerializer로 변경하면 좀 더 간단하게 구현 할 수 있습니다. 아래와 같이 수정합니다. # &amp;#x27;api_basic&#x2F;serializers.py&amp;#x27;  class ArticleSerializer(serializers.ModelSerializer):     class Meta:         model &#x3D; Arti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django Rest Framework 2 (함수기반뷰)">
 <meta property="og:url" content="https://hikoding.github.io/2022/10/06/Before/Python/Django/RestFramework/DRF2/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="Serializer를 ModelSerializer로 변경하면 좀 더 간단하게 구현 할 수 있습니다. 아래와 같이 수정합니다. 123456# &amp;#x27;api_basic&#x2F;serializers.py&amp;#x27;class ArticleSerializer(serializers.ModelSerializer):    class Meta:        model &#x3D; Ar">
+<meta property="og:description" content="Serializer를 ModelSerializer로 변경하면 좀 더 간단하게 구현 할 수 있습니다. 아래와 같이 수정합니다. # &amp;#x27;api_basic&#x2F;serializers.py&amp;#x27;  class ArticleSerializer(serializers.ModelSerializer):     class Meta:         model &#x3D; Arti">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2022-10-06T09:54:38.321Z">
 <meta property="article:modified_time" content="2022-10-07T15:52:50.532Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k words
+          2k words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          18 mins
+          17 mins
         
       </span>
     
@@ -805,22 +805,95 @@
                 
                 <p>Serializer를 ModelSerializer로 변경하면 좀 더 간단하게 구현 할 수 있습니다.</p>
 <p>아래와 같이 수정합니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/serializers.py&#x27;</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleSerializer</span>(serializers.ModelSerializer):<br>    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Meta</span>:<br>        model = Article<br>        fields = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-string">&#x27;author&#x27;</span>, <span class="hljs-string">&#x27;date&#x27;</span>]<br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/serializers.py&#x27;</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleSerializer</span>(serializers.ModelSerializer):
+    <span class="hljs-keyword">class</span> <span class="hljs-title class_">Meta</span>:
+        model = Article
+        fields = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;title&#x27;</span>, <span class="hljs-string">&#x27;author&#x27;</span>, <span class="hljs-string">&#x27;date&#x27;</span>]</code></pre></div>
 
 
 
 <p>view를 추가해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span><br><br><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render<br><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse, JsonResponse<br><span class="hljs-keyword">from</span> rest_framework.parsers <span class="hljs-keyword">import</span> JSONParser<br><span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article<br><span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer<br><span class="hljs-keyword">from</span> django.views.decorators.csrf <span class="hljs-keyword">import</span> csrf_exempt<br><br><br><span class="hljs-meta">@csrf_exempt</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">article_list</span>(<span class="hljs-params">request</span>):<br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        articles = Article.objects.<span class="hljs-built_in">all</span>()<br>        serializer = ArticleSerializer(articles, many=<span class="hljs-literal">True</span>)<br>        <span class="hljs-keyword">return</span> JsonResponse(serializer.data, safe=<span class="hljs-literal">False</span>)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:<br>        data = JSONParser().parse(request)<br>        serializer = ArticleSerializer(data=data)<br><br>        <span class="hljs-keyword">if</span> serializer.is_valid():<br>            serializer.save()<br>            <span class="hljs-keyword">return</span> JsonResponse(serializer.data, status=<span class="hljs-number">201</span>)<br>        <span class="hljs-keyword">return</span> JsonResponse(serializer.error, status=<span class="hljs-number">400</span>)<br><br><br><span class="hljs-meta">@csrf_exempt</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">article_detail</span>(<span class="hljs-params">request, pk</span>):<br>    <span class="hljs-keyword">try</span>:<br>        article = Article.objects.get(pk=pk)<br>    <span class="hljs-keyword">except</span> Article.DoesNotExist:<br>        <span class="hljs-keyword">return</span> HttpResponse(status=<span class="hljs-number">404</span>)<br><br>    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:<br>        serializer = ArticleSerializer(article)<br>        <span class="hljs-keyword">return</span> JsonResponse(serializer.data)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;PUT&#x27;</span>:<br>        data = JSONParser().parse(request)<br>        serializer = ArticleSerializer(article, data=data)<br>        <span class="hljs-keyword">if</span> serializer.is_valid():<br>            serializer.save()<br>            <span class="hljs-keyword">return</span> JsonResponse(serializer.data)<br>        <span class="hljs-keyword">return</span> JsonResponse(serializer.error, status=<span class="hljs-number">400</span>)<br><br>    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;DELETE&#x27;</span>:<br>        article.delete()<br>        <span class="hljs-keyword">return</span> HttpResponse(status=<span class="hljs-number">204</span>)<br><br><br><br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic/views.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse, JsonResponse
+<span class="hljs-keyword">from</span> rest_framework.parsers <span class="hljs-keyword">import</span> JSONParser
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Article
+<span class="hljs-keyword">from</span> .serializers <span class="hljs-keyword">import</span> ArticleSerializer
+<span class="hljs-keyword">from</span> django.views.decorators.csrf <span class="hljs-keyword">import</span> csrf_exempt
+
+
+<span class="hljs-meta">@csrf_exempt</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">article_list</span>(<span class="hljs-params">request</span>):
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:
+        articles = Article.objects.<span class="hljs-built_in">all</span>()
+        serializer = ArticleSerializer(articles, many=<span class="hljs-literal">True</span>)
+        <span class="hljs-keyword">return</span> JsonResponse(serializer.data, safe=<span class="hljs-literal">False</span>)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:
+        data = JSONParser().parse(request)
+        serializer = ArticleSerializer(data=data)
+
+        <span class="hljs-keyword">if</span> serializer.is_valid():
+            serializer.save()
+            <span class="hljs-keyword">return</span> JsonResponse(serializer.data, status=<span class="hljs-number">201</span>)
+        <span class="hljs-keyword">return</span> JsonResponse(serializer.error, status=<span class="hljs-number">400</span>)
+
+
+<span class="hljs-meta">@csrf_exempt</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">article_detail</span>(<span class="hljs-params">request, pk</span>):
+    <span class="hljs-keyword">try</span>:
+        article = Article.objects.get(pk=pk)
+    <span class="hljs-keyword">except</span> Article.DoesNotExist:
+        <span class="hljs-keyword">return</span> HttpResponse(status=<span class="hljs-number">404</span>)
+
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;GET&#x27;</span>:
+        serializer = ArticleSerializer(article)
+        <span class="hljs-keyword">return</span> JsonResponse(serializer.data)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;PUT&#x27;</span>:
+        data = JSONParser().parse(request)
+        serializer = ArticleSerializer(article, data=data)
+        <span class="hljs-keyword">if</span> serializer.is_valid():
+            serializer.save()
+            <span class="hljs-keyword">return</span> JsonResponse(serializer.data)
+        <span class="hljs-keyword">return</span> JsonResponse(serializer.error, status=<span class="hljs-number">400</span>)
+
+    <span class="hljs-keyword">elif</span> request.method == <span class="hljs-string">&#x27;DELETE&#x27;</span>:
+        article.delete()
+        <span class="hljs-keyword">return</span> HttpResponse(status=<span class="hljs-number">204</span>)
+
+
+</code></pre></div>
 
 
 
 <p>urls.py에 등록해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;config/urls.py&#x27;</span><br><br><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin<br><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path, include<br><br>urlpatterns = [<br>    path(<span class="hljs-string">&#x27;admin/&#x27;</span>, admin.site.urls),<br>    path(<span class="hljs-string">&#x27;&#x27;</span>, include(<span class="hljs-string">&#x27;api_basic.urls&#x27;</span>)),<br>]<br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;config/urls.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path, include
+
+urlpatterns = [
+    path(<span class="hljs-string">&#x27;admin/&#x27;</span>, admin.site.urls),
+    path(<span class="hljs-string">&#x27;&#x27;</span>, include(<span class="hljs-string">&#x27;api_basic.urls&#x27;</span>)),
+]</code></pre></div>
 
 
 
 <p>api_basic 앱에도 urls.py를 추가해줍니다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic\urls.py&#x27;</span><br><br><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path<br><span class="hljs-keyword">from</span> .views <span class="hljs-keyword">import</span> article_list, article_detail<br><br>urlpatterns = [<br>    path(<span class="hljs-string">&#x27;article/&#x27;</span>, article_list),<br>    path(<span class="hljs-string">&#x27;detail/&lt;int:pk&gt;/&#x27;</span>, article_detail),<br>]<br><br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># &#x27;api_basic\urls.py&#x27;</span>
+
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+<span class="hljs-keyword">from</span> .views <span class="hljs-keyword">import</span> article_list, article_detail
+
+urlpatterns = [
+    path(<span class="hljs-string">&#x27;article/&#x27;</span>, article_list),
+    path(<span class="hljs-string">&#x27;detail/&lt;int:pk&gt;/&#x27;</span>, article_detail),
+]
+</code></pre></div>
 
 
                 

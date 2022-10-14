@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="callback 함수 1234567891011&#x2F;&#x2F; callback 함수function add(a, b, callback) &amp;#123;    var result &#x3D; a + b    callback(result)&amp;#125;add(10, 20, function(result) &amp;#123;    console.log(&amp;#x27;더하기 결과(콜백함수 안에서): &amp;#x">
+    <meta name="description" content="callback 함수 &#x2F;&#x2F; callback 함수  function add(a, b, callback) &amp;#123;     var result &#x3D; a + b     callback(result) &amp;#125;  add(10, 20, function(result) &amp;#123;     console.log(&amp;#x27;더하기 결과(콜백함수 안에서): &amp;#x27; +">
 <meta property="og:type" content="article">
 <meta property="og:title" content="15. callback 함수">
 <meta property="og:url" content="https://hikoding.github.io/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="callback 함수 1234567891011&#x2F;&#x2F; callback 함수function add(a, b, callback) &amp;#123;    var result &#x3D; a + b    callback(result)&amp;#125;add(10, 20, function(result) &amp;#123;    console.log(&amp;#x27;더하기 결과(콜백함수 안에서): &amp;#x">
+<meta property="og:description" content="callback 함수 &#x2F;&#x2F; callback 함수  function add(a, b, callback) &amp;#123;     var result &#x3D; a + b     callback(result) &amp;#125;  add(10, 20, function(result) &amp;#123;     console.log(&amp;#x27;더하기 결과(콜백함수 안에서): &amp;#x27; +">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2019-10-27T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-07T16:01:02.344Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          205 words
+          191 words
         
       </span>
     
@@ -804,9 +804,19 @@
               <div class="markdown-body">
                 
                 <p>callback 함수</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// callback 함수</span><br><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b, callback</span>) &#123;<br>    <span class="hljs-keyword">var</span> result = a + b<br>    <span class="hljs-title function_">callback</span>(result)<br>&#125;<br><br><span class="hljs-title function_">add</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;더하기 결과(콜백함수 안에서): &#x27;</span> + result)<br>&#125;)<br><br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// callback 함수</span>
 
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">더하기 결과<span class="hljs-comment">(콜백함수 안에서)</span>: <span class="hljs-number">30</span><br></code></pre></td></tr></table></figure>
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b, callback</span>) &#123;
+    <span class="hljs-keyword">var</span> result = a + b
+    <span class="hljs-title function_">callback</span>(result)
+&#125;
+
+<span class="hljs-title function_">add</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) &#123;
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;더하기 결과(콜백함수 안에서): &#x27;</span> + result)
+&#125;)
+</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs gcode">더하기 결과<span class="hljs-comment">(콜백함수 안에서)</span>: <span class="hljs-number">30</span></code></pre></div>
 
                 
               </div>
@@ -899,9 +909,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/10.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20push,%20pop%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="10. 배열에서 push, pop 사용하기">
+                      <a href="/2019/10/28/Before/Javascript/Node/04.%20%EB%AA%A8%EB%93%88%EB%A1%9C%20%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0/" title="04. 모듈로 분리하기">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">10. 배열에서 push, pop 사용하기</span>
+                        <span class="hidden-mobile">04. 모듈로 분리하기</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -909,8 +919,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/14.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20slice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="14. 배열에서 slice 사용하기">
-                        <span class="hidden-mobile">14. 배열에서 slice 사용하기</span>
+                      <a href="/2019/10/28/Before/Javascript/Node/16.%20prototype%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" title="16. prototype 사용하기">
+                        <span class="hidden-mobile">16. prototype 사용하기</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -226,15 +226,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
-          18. 이벤트 사용하기
+        <a href="/2019/10/28/Before/Javascript/Node/11.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20unshift%20shift%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          11. 배열에 unshift, shift 사용하기
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/11.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20unshift%20shift%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          이벤트 사용하기 123456789101112// 이벤트 사용하기process.on(&#x27;exit&#x27;, function() &#123;    console.log(&#x27;exit 이벤트 발생함.&#x27;)&#125;)setTimeout(function() &#123;   console.log(&#x27;2초 후에 실행 되었음&#x27;)
+          배열에서 unshift, shift 사용하기 // 배열에 unshift, shift 사용하기  var users = [&#123; name: &#x27;홍길동2&#x27;, age: 20 &#125;, &#123; name: &#x27;홍길동3&#x27;, age: 25 &#125;] console.log(&#x27;배열 원소의 개수: &#x27; + us
         </div>
       </a>
 
@@ -294,15 +294,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
-          17. url, querystring 모듈
+        <a href="/2019/10/28/Before/Javascript/Node/12.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20delete%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          12. 배열에서 delete 사용하기
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/12.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20delete%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          url, querystring 모듈 123456789101112131415161718192021// url 모듈 : url 주소를 분석합니다var url = require(&#x27;url&#x27;)var urlStr =    &#x27;https://search.naver.com/search.naver?sm=top_hty&amp;fbm=1&amp;ie=
+          배열에서 delete 사용하기 // 배열에서 delete 사용하기  var users = [     &#123; name: &#x27;홍길동1&#x27;, age: 22 &#125;,     &#123; name: &#x27;홍길동2&#x27;, age: 24 &#125;,     &#123; name: &#x27;홍길동3&#x27;, age: 29 &#1
         </div>
       </a>
 
@@ -362,15 +362,423 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/20.%20emit%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
-          20. emit을 활용하여 이벤트 사용하기
+        <a href="/2019/10/28/Before/Javascript/Node/10.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20push,%20pop%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          10. 배열에서 push, pop 사용하기
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/20.%20emit%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%98%EC%97%AC%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/10.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20push,%20pop%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          emit을 활용하여 이벤트 사용하기 12345678910111213141516// main.js 파일 내용// emit을 활용하여 이벤트 사용하기// calc 파일 가져오기var Calc = require(&#x27;./calc&#x27;)var calc1 = new Calc()calc1.emit(&#x27;stop&#x27;)console.log(&#x2
+          배열에 push, pop 사용하기 // 배열에 push, pop 사용하기  var users = [&#123; name: &#x27;홍길동&#x27;, age: 20 &#125;, &#123; name: &#x27;홍길동2&#x27;, age: 25 &#125;] console.log(&#x27;배열 원소의 개수: &#x27; + users.length)
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/14.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20slice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          14. 배열에서 slice 사용하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/14.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20slice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          배열에서 slice 사용하기 // 배열에서 slice 사용하기  var users = [     &#123; name: &#x27;홍길동1&#x27;, age: 22 &#125;,     &#123; name: &#x27;홍길동2&#x27;, age: 24 &#125;,     &#123; name: &#x27;홍길동3&#x27;, age: 29 &#125
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/09.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20for%EB%AC%B8%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          09. 배열에서 for문 활용하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/09.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20for%EB%AC%B8%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          배열에 for문 활용하기 // 배열에 for문 활용하기  var users = [     &#123; name: &#x27;홍길동&#x27;, age: 20 &#125;,     &#123; name: &#x27;홍길동2&#x27;, age: 22 &#125;,     &#123; name: &#x27;홍길동3&#x27;, age: 24 &#125; ]
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/04.%20%EB%AA%A8%EB%93%88%EB%A1%9C%20%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0/" target="_self">
+          04. 모듈로 분리하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/04.%20%EB%AA%A8%EB%93%88%EB%A1%9C%20%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          같은 파일에서 모듈 분리하기var calc = &#123;&#125;  calc.add = function(a,b) &#123;     return a+b &#125; console.log(&#x27;모듈로 분리하기 전 - calc.add:&#x27; + calc.add(10, 20)) 모듈로 분리하기 전 - calc.add:30  다른 파일로 모듈 분리하
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" target="_self">
+          15. callback 함수
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" target="_self">
+        <div>
+          callback 함수 // callback 함수  function add(a, b, callback) &#123;     var result = a + b     callback(result) &#125;  add(10, 20, function(result) &#123;     console.log(&#x27;더하기 결과(콜백함수 안에서): &#x27; +
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/16.%20prototype%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          16. prototype 사용하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/16.%20prototype%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          prototype 사용하기 // prototype 사용하기  var person1 = &#123; name: &#x27;홍길동1&#x27;, age: 21 &#125; var person2 = &#123; name: &#x27;홍길동2&#x27;, age: 22 &#125;  function Person(name, age) &#123;     this.na
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/13.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20splice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          13. 배열에서 splice 사용하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/13.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20splice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          배열에서 splice 사용하기 // 배열에서 splice 사용하기  var users = [     &#123; name: &#x27;홍길동1&#x27;, age: 22 &#125;,     &#123; name: &#x27;홍길동2&#x27;, age: 24 &#125;,     &#123; name: &#x27;홍길동3&#x27;, age: 29 &#1
         </div>
       </a>
 
@@ -438,7 +846,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/19.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20on%20emit%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          이벤트 on, emit 사용하기 1234567891011// 이벤트 on, emit 사용하기// emit으로 보내고 on으로 받음process.on(&#x27;tick&#x27;, function(count) &#123;    console.log(&#x27;tick 이벤트 발생함: &#x27; + count)&#125;)setTimeout(function
+          이벤트 on, emit 사용하기 // 이벤트 on, emit 사용하기 // emit으로 보내고 on으로 받음  process.on(&#x27;tick&#x27;, function(count) &#123;     console.log(&#x27;tick 이벤트 발생함: &#x27; + count) &#125;)  setTimeout(function() &#1
         </div>
       </a>
 
@@ -476,386 +884,6 @@
   
   
 
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/28/Before/Javascript/Node/21.%20readFileSync%20%ED%8C%8C%EC%9D%BC%EC%9D%84%20%EC%9D%BD%EA%B3%A0%20%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0%20%EB%8F%99%EA%B8%B0%EB%B0%A9%EC%8B%9D/" target="_self">
-          21. readFileSync : 파일을 읽고 불러오기 (동기방식)
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/21.%20readFileSync%20%ED%8C%8C%EC%9D%BC%EC%9D%84%20%EC%9D%BD%EA%B3%A0%20%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0%20%EB%8F%99%EA%B8%B0%EB%B0%A9%EC%8B%9D/" target="_self">
-        <div>
-          readFileSync : 파일을 읽고 불러오기 (동기방식) 1234567// readFileSync : 파일을 읽고 불러오기 (동기방식)var fs = require(&#x27;fs&#x27;)var data = fs.readFileSync(&#x27;./package.json&#x27;, &#x27;utf8&#x27;)console.log(data)
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-28 00:00" pubdate>
-              2019-10-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/28/Before/Javascript/Node/22.%20readFile%20%ED%8C%8C%EC%9D%BC%EC%9D%84%20%EC%9D%BD%EA%B3%A0%20%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0%20(%EB%B9%84%EB%8F%99%EA%B8%B0%EB%B0%A9%EC%8B%9D)/" target="_self">
-          22. readFile : 파일을 읽고 불러오기 (비동기방식)
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/22.%20readFile%20%ED%8C%8C%EC%9D%BC%EC%9D%84%20%EC%9D%BD%EA%B3%A0%20%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0%20(%EB%B9%84%EB%8F%99%EA%B8%B0%EB%B0%A9%EC%8B%9D)/" target="_self">
-        <div>
-          readFile : 파일을 읽고 불러오기 (비동기방식) 12345678// readFile : 파일을 읽고 불러오기 (비동기방식)var fs = require(&#x27;fs&#x27;)fs.readFile(&#x27;./package.json&#x27;, &#x27;utf8&#x27;, function(err, data) &#123;    console.
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-28 00:00" pubdate>
-              2019-10-28
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
-          01. 형변환 하기
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
-        <div>
-          형변환 하기 1234567&lt;html&gt;&lt;head&gt;    &lt;script&gt;        alert(typeof Number(&#x27;234&#x27;))    &lt;/script&gt;&lt;/head&gt;&lt;/html&gt;
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-27 00:00" pubdate>
-              2019-10-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/27/Before/Javascript/03%20%EB%B0%B0%EC%97%B4/" target="_self">
-          03. 배열
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/03%20%EB%B0%B0%EC%97%B4/" target="_self">
-        <div>
-          배열 12345678910111213141516&lt;html&gt;&lt;head&gt;    &lt;script&gt;        var array = [10, 20, 30, 40, 50];        alert(array);        alert(array[0]);        alert(array[1]);        alert(array[2]
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-27 00:00" pubdate>
-              2019-10-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/27/Before/Javascript/02%20prompt%20confirm/" target="_self">
-          02. prompt confirm
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/02%20prompt%20confirm/" target="_self">
-        <div>
-          prompt : 입력값을 받을수 있습니다confirm: 확인 취소 버튼을 표시합니다 1234567891011&lt;html&gt;&lt;head&gt;    &lt;script&gt;        var output = prompt(&#x27;메시지&#x27;, &#x27;디폴트&#x27;)        alert(output)        var outp
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-27 00:00" pubdate>
-              2019-10-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/27/Before/Javascript/04%20%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90/" target="_self">
-          04. 삼항연산자
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/04%20%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90/" target="_self">
-        <div>
-          삼항연산자 12345678910&lt;html&gt;&lt;head&gt;    &lt;script&gt;        var input = prompt(&#x27;숫자를 입력해주세요&#x27;, &#x27;&#x27;)        var number = Number(input)        (number &gt; 0) ? alert(&#x27;자연수입니
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-27 00:00" pubdate>
-              2019-10-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
   
 
   
@@ -876,7 +904,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="page-number" href="/page/6/#board">6</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

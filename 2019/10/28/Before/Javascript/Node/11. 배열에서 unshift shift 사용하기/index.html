@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="배열에서 unshift, shift 사용하기 12345678910111213141516&#x2F;&#x2F; 배열에 unshift, shift 사용하기var users &#x3D; [&amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 20 &amp;#125;, &amp;#123; name: &amp;#x27;홍길동3&amp;#x27;, age: 25 &amp;#125;]console.log(&amp;#x27;배열">
+    <meta name="description" content="배열에서 unshift, shift 사용하기 &#x2F;&#x2F; 배열에 unshift, shift 사용하기  var users &#x3D; [&amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 20 &amp;#125;, &amp;#123; name: &amp;#x27;홍길동3&amp;#x27;, age: 25 &amp;#125;] console.log(&amp;#x27;배열 원소의 개수: &amp;#x27; + us">
 <meta property="og:type" content="article">
 <meta property="og:title" content="11. 배열에 unshift, shift 사용하기">
 <meta property="og:url" content="https://hikoding.github.io/2019/10/28/Before/Javascript/Node/11.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20unshift%20shift%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="배열에서 unshift, shift 사용하기 12345678910111213141516&#x2F;&#x2F; 배열에 unshift, shift 사용하기var users &#x3D; [&amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 20 &amp;#125;, &amp;#123; name: &amp;#x27;홍길동3&amp;#x27;, age: 25 &amp;#125;]console.log(&amp;#x27;배열">
+<meta property="og:description" content="배열에서 unshift, shift 사용하기 &#x2F;&#x2F; 배열에 unshift, shift 사용하기  var users &#x3D; [&amp;#123; name: &amp;#x27;홍길동2&amp;#x27;, age: 20 &amp;#125;, &amp;#123; name: &amp;#x27;홍길동3&amp;#x27;, age: 25 &amp;#125;] console.log(&amp;#x27;배열 원소의 개수: &amp;#x27; + us">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2019-10-27T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-07T16:01:02.342Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          553 words
+          525 words
         
       </span>
     
@@ -804,9 +804,28 @@
               <div class="markdown-body">
                 
                 <p>배열에서 unshift, shift 사용하기</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 배열에 unshift, shift 사용하기</span><br><br><span class="hljs-keyword">var</span> users = [&#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동2&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">20</span> &#125;, &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동3&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">25</span> &#125;]<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)<br><br><span class="hljs-comment">// unshift : 배열의 첫번째 원소 추가하기</span><br>users.<span class="hljs-title function_">unshift</span>(&#123;<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;홍길동1&#x27;</span>, <span class="hljs-attr">age</span>:<span class="hljs-number">28</span>&#125;)<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)<br><br><span class="hljs-comment">// shift : 배열의 첫번째 원소 꺼내기</span><br><span class="hljs-keyword">var</span> elem = users.<span class="hljs-title function_">shift</span>()<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;shift로 꺼낸 첫번째 원소&#x27;</span>)<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">dir</span>(elem)<br><br></code></pre></td></tr></table></figure>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// 배열에 unshift, shift 사용하기</span>
 
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span><br><span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">3</span><br><span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span><br><span class="hljs-attribute">shift로 꺼낸 첫번째 원소</span><br><span class="hljs-attribute">&#123; name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;홍길동1&#x27;, age: 28 &#125;</span><br></code></pre></td></tr></table></figure>
+<span class="hljs-keyword">var</span> users = [&#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동2&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">20</span> &#125;, &#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;홍길동3&#x27;</span>, <span class="hljs-attr">age</span>: <span class="hljs-number">25</span> &#125;]
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)
+
+<span class="hljs-comment">// unshift : 배열의 첫번째 원소 추가하기</span>
+users.<span class="hljs-title function_">unshift</span>(&#123;<span class="hljs-attr">name</span>:<span class="hljs-string">&#x27;홍길동1&#x27;</span>, <span class="hljs-attr">age</span>:<span class="hljs-number">28</span>&#125;)
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)
+
+<span class="hljs-comment">// shift : 배열의 첫번째 원소 꺼내기</span>
+<span class="hljs-keyword">var</span> elem = users.<span class="hljs-title function_">shift</span>()
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;배열 원소의 개수: &#x27;</span> + users.<span class="hljs-property">length</span>)
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;shift로 꺼낸 첫번째 원소&#x27;</span>)
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">dir</span>(elem)
+</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs nestedtext"><span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span>
+<span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">3</span>
+<span class="hljs-attribute">배열 원소의 개수</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span>
+<span class="hljs-attribute">shift로 꺼낸 첫번째 원소</span>
+<span class="hljs-attribute">&#123; name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;홍길동1&#x27;, age: 28 &#125;</span></code></pre></div>
 
                 
               </div>

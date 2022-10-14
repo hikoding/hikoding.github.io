@@ -16,12 +16,12 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="같은 파일에서 모듈 분리하기123456var calc &#x3D; &amp;#123;&amp;#125;calc.add &#x3D; function(a,b) &amp;#123;    return a+b&amp;#125;console.log(&amp;#x27;모듈로 분리하기 전 - calc.add:&amp;#x27; + calc.add(10, 20)) 1모듈로 분리하기 전 - calc.add:30  다른 파일로 모듈 분">
+    <meta name="description" content="같은 파일에서 모듈 분리하기var calc &#x3D; &amp;#123;&amp;#125;  calc.add &#x3D; function(a,b) &amp;#123;     return a+b &amp;#125; console.log(&amp;#x27;모듈로 분리하기 전 - calc.add:&amp;#x27; + calc.add(10, 20)) 모듈로 분리하기 전 - calc.add:30  다른 파일로 모듈 분리하">
 <meta property="og:type" content="article">
 <meta property="og:title" content="04. 모듈로 분리하기">
 <meta property="og:url" content="https://hikoding.github.io/2019/10/28/Before/Javascript/Node/04.%20%EB%AA%A8%EB%93%88%EB%A1%9C%20%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0/index.html">
 <meta property="og:site_name" content="NOTE WEB">
-<meta property="og:description" content="같은 파일에서 모듈 분리하기123456var calc &#x3D; &amp;#123;&amp;#125;calc.add &#x3D; function(a,b) &amp;#123;    return a+b&amp;#125;console.log(&amp;#x27;모듈로 분리하기 전 - calc.add:&amp;#x27; + calc.add(10, 20)) 1모듈로 분리하기 전 - calc.add:30  다른 파일로 모듈 분">
+<meta property="og:description" content="같은 파일에서 모듈 분리하기var calc &#x3D; &amp;#123;&amp;#125;  calc.add &#x3D; function(a,b) &amp;#123;     return a+b &amp;#125; console.log(&amp;#x27;모듈로 분리하기 전 - calc.add:&amp;#x27; + calc.add(10, 20)) 모듈로 분리하기 전 - calc.add:30  다른 파일로 모듈 분리하">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2019-10-27T15:00:00.000Z">
 <meta property="article:modified_time" content="2022-10-07T16:01:02.342Z">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          601 words
+          572 words
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          6 mins
+          5 mins
         
       </span>
     
@@ -803,16 +803,37 @@
             
               <div class="markdown-body">
                 
-                <h3 id="같은-파일에서-모듈-분리하기"><a href="#같은-파일에서-모듈-분리하기" class="headerlink" title="같은 파일에서 모듈 분리하기"></a>같은 파일에서 모듈 분리하기</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> calc = &#123;&#125;<br><br>calc.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>) &#123;<br>    <span class="hljs-keyword">return</span> a+b<br>&#125;<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리하기 전 - calc.add:&#x27;</span> + calc.<span class="hljs-title function_">add</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>))<br></code></pre></td></tr></table></figure>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">모듈로 분리하기 전 - calc.<span class="hljs-keyword">add</span>:<span class="hljs-number">30</span><br></code></pre></td></tr></table></figure>
+                <h3 id="같은-파일에서-모듈-분리하기"><a href="#같은-파일에서-모듈-분리하기" class="headerlink" title="같은 파일에서 모듈 분리하기"></a>같은 파일에서 모듈 분리하기</h3><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> calc = &#123;&#125;
 
-<h3 id="다른-파일로-모듈-분리하기"><a href="#다른-파일로-모듈-분리하기" class="headerlink" title="다른 파일로 모듈 분리하기"></a>다른 파일로 모듈 분리하기</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// calc.js</span><br><span class="hljs-built_in">exports</span>.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) &#123;<br>    <span class="hljs-keyword">return</span> a + b<br>&#125;<br></code></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// main.js</span><br><span class="hljs-keyword">var</span> calc = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./calc&#x27;</span>)<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리한 후 - calc.add : &#x27;</span> + calc.<span class="hljs-title function_">add</span>(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>))<br></code></pre></td></tr></table></figure>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">모듈로 분리한 후 - calc.<span class="hljs-built_in">add</span> : 40<br></code></pre></td></tr></table></figure>
+calc.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>) &#123;
+    <span class="hljs-keyword">return</span> a+b
+&#125;
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리하기 전 - calc.add:&#x27;</span> + calc.<span class="hljs-title function_">add</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>))</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs csharp">모듈로 분리하기 전 - calc.<span class="hljs-keyword">add</span>:<span class="hljs-number">30</span></code></pre></div>
 
-<h3 id="다른-파일로-모듈-분리하기2"><a href="#다른-파일로-모듈-분리하기2" class="headerlink" title="다른 파일로 모듈 분리하기2"></a>다른 파일로 모듈 분리하기2</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// calc2.js</span><br><span class="hljs-keyword">var</span> calc = &#123;&#125;<br><br>calc.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) &#123;<br>    <span class="hljs-keyword">return</span> a + b<br>&#125;<br><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = calc<br></code></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// main2.js</span><br><span class="hljs-keyword">var</span> calc2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./calc2&#x27;</span>)<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리한 후 - calc2.add: &#x27;</span> + calc2.<span class="hljs-title function_">add</span>(<span class="hljs-number">30</span>, <span class="hljs-number">30</span>))<br></code></pre></td></tr></table></figure>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">모듈로 분리한 후 - calc2.<span class="hljs-keyword">add</span>: <span class="hljs-number">60</span><br></code></pre></td></tr></table></figure>
+<h3 id="다른-파일로-모듈-분리하기"><a href="#다른-파일로-모듈-분리하기" class="headerlink" title="다른 파일로 모듈 분리하기"></a>다른 파일로 모듈 분리하기</h3><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// calc.js</span>
+<span class="hljs-built_in">exports</span>.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) &#123;
+    <span class="hljs-keyword">return</span> a + b
+&#125;</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">var</span> calc = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./calc&#x27;</span>)
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리한 후 - calc.add : &#x27;</span> + calc.<span class="hljs-title function_">add</span>(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>))</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs routeros">모듈로 분리한 후 - calc.<span class="hljs-built_in">add</span> : 40</code></pre></div>
+
+<h3 id="다른-파일로-모듈-분리하기2"><a href="#다른-파일로-모듈-분리하기2" class="headerlink" title="다른 파일로 모듈 분리하기2"></a>다른 파일로 모듈 분리하기2</h3><div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// calc2.js</span>
+<span class="hljs-keyword">var</span> calc = &#123;&#125;
+
+calc.<span class="hljs-property">add</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) &#123;
+    <span class="hljs-keyword">return</span> a + b
+&#125;
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = calc</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// main2.js</span>
+<span class="hljs-keyword">var</span> calc2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./calc2&#x27;</span>)
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;모듈로 분리한 후 - calc2.add: &#x27;</span> + calc2.<span class="hljs-title function_">add</span>(<span class="hljs-number">30</span>, <span class="hljs-number">30</span>))</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs csharp">모듈로 분리한 후 - calc2.<span class="hljs-keyword">add</span>: <span class="hljs-number">60</span></code></pre></div>
 
                 
               </div>
@@ -905,9 +926,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/03.%20console%20time/" title="03. console.time">
+                      <a href="/2019/10/28/Before/Javascript/Node/09.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20for%EB%AC%B8%20%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/" title="09. 배열에서 for문 활용하기">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">03. console.time</span>
+                        <span class="hidden-mobile">09. 배열에서 for문 활용하기</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -915,8 +936,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2019/10/28/Before/Javascript/Node/05.%20%EB%B3%80%EC%88%98%EC%97%90%20%ED%95%A8%EC%88%98%20%ED%95%A0%EB%8B%B9%ED%95%98%EA%B8%B0/" title="05. 변수에 함수 할당하기">
-                        <span class="hidden-mobile">05. 변수에 함수 할당하기</span>
+                      <a href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" title="15. callback 함수">
+                        <span class="hidden-mobile">15. callback 함수</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
