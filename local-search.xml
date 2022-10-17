@@ -4,6 +4,48 @@
   
   
   <entry>
+    <title>linux chown 사용법</title>
+    <link href="/2022/10/18/Linux/Ubuntu/linux%20chown%20%EC%82%AC%EC%9A%A9%EB%B2%95/"/>
+    <url>/2022/10/18/Linux/Ubuntu/linux%20chown%20%EC%82%AC%EC%9A%A9%EB%B2%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="chown-사용법"><a href="#chown-사용법" class="headerlink" title="chown 사용법"></a>chown 사용법</h1><p>리눅스에서 디렉토리나 파일의 소유자를 변경할수있습니다.</p><p><code>./tmp/</code> 디렉터리의 소유자와 그룹을 모두 ubuntu로 변경하는 예제입니다.</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> ubuntu:ubuntu ./tmp/</code></pre></div><p>소유자만 변경하고자 하는 경우</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> ubuntu ./tmp/</code></pre></div><p>하위 디렉토리까지 변경하는 경우 -R 옵션을 넣어줍니다.</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> -R ubuntu:ubuntu ./tmp/</code></pre></div><p>심볼릭 링크를 변경하는 경우 -h 옵션을 추가해 줍니다.</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> -h ubuntu:ubuntu ./symbolic_path/</code></pre></div><p>심볼릭 링크와 하위 디렉토리를 포함해 변경하는경우 -hR을 함께 넣어줍니다.</p><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> -hR ubuntu:ubuntu ./tmp/</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+      <category>Ubuntu</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>django-dotenv 사용하기</title>
+    <link href="/2022/10/16/Python/Django/Django%20dotenv/"/>
+    <url>/2022/10/16/Python/Django/Django%20dotenv/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Django-dotenv-사용하기"><a href="#Django-dotenv-사용하기" class="headerlink" title="Django-dotenv 사용하기"></a>Django-dotenv 사용하기</h1><p>중요한 정보의 경우 직접 코드에 써넣으면 보안상 위험할 수 있으므로<br>환경 변수에 저장해놓고 불러와서 사용하는 게 좀 더 안전한 방법입니다.</p><p>이를 사용하기 편하게 해주는 여러 library가 있습니다.</p><p>그중 django-dotenv의 사용법을 소개합니다</p><h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><p>django-dotenv 를 설치해줍니다.</p><div class="code-wrapper"><pre><code class="hljs shell">pip install django-dotenv</code></pre></div><h2 id="env-파일생성"><a href="#env-파일생성" class="headerlink" title=".env 파일생성"></a><code>.env</code> 파일생성</h2><p>프로젝트의 root 폴더에서 <code>.env</code> 파일을 생성합니다<br>다음은 <code>.env</code>에 입력하는 예시입니다.<br>각자에게 알맞은 값으로 입력해 줍니다.</p><div class="code-wrapper"><pre><code class="hljs txt">EMAIL_HOST_USER=&#x27;user&#x27;EMAIL_HOST_PASSWORD=&#x27;password&#x27;</code></pre></div><p><code>settings.py</code> 파일에서 사용하는 예시입니다.</p><div class="code-wrapper"><pre><code class="hljs py">EMAIL_HOST_USER = os.environ.get(<span class="hljs-string">&#x27;EMAIL_HOST_USER&#x27;</span>)EMAIL_HOST_PASSWORD = os.environ.get(<span class="hljs-string">&#x27;EMAIL_HOST_PASSWORD&#x27;</span>)</code></pre></div><h2 id="추가-설정"><a href="#추가-설정" class="headerlink" title="추가 설정"></a>추가 설정</h2><p><code>manage.py</code> 파일에 다음 내용을 추가해 줍니다.</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-keyword">import</span> dotenv <span class="hljs-comment">#add</span><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():    dotenv.read_dotenv() <span class="hljs-comment">#add</span>    ...</code></pre></div><p>django에서 django-dotenv의 사용방법을 알아보았습니다.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Python</category>
+      
+      <category>Django</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>설치</title>
     <link href="/2022/10/14/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%84%A4%EC%B9%98/"/>
     <url>/2022/10/14/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%84%A4%EC%B9%98/</url>
@@ -50,11 +92,11 @@
   
   
   <entry>
-    <title>변수</title>
-    <link href="/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EB%B3%80%EC%88%98/"/>
-    <url>/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EB%B3%80%EC%88%98/</url>
+    <title>첫번째 프로그램</title>
+    <link href="/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%B2%AB%EB%B2%88%EC%A7%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/"/>
+    <url>/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%B2%AB%EB%B2%88%EC%A7%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</url>
     
-    <content type="html"><![CDATA[<h1 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h1><p>변수는 값을 할당하여 데이터를 저장할 수 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>b = <span class="hljs-string">&#x27;hello&#x27;</span><span class="hljs-built_in">print</span>(a)<span class="hljs-built_in">print</span>(b)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-number">5</span>hello</code></pre></div><h2 id="변수-유형-Type-선언"><a href="#변수-유형-Type-선언" class="headerlink" title="변수 유형(Type) 선언"></a>변수 유형(Type) 선언</h2><p>파이썬은 어떤 타입의 데이터가 들어갈지 선언할 필요가 없으며,<br>선언 후 다른 타입으로 변경할 수도 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>a = <span class="hljs-string">&#x27;Five&#x27;</span><span class="hljs-built_in">print</span>(a)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">Five</code></pre></div><h2 id="문자열-String"><a href="#문자열-String" class="headerlink" title="문자열(String)"></a>문자열(String)</h2><p>문자 여러개가 나열된것을 문자열이라고 합니다.<br>홑따옴표(작은따옴표), 쌍따옴표(큰따옴표) 모두 사용 가능합니다</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-string">&quot;hello&quot;</span>a = <span class="hljs-string">&#x27;hello&#x27;</span></code></pre></div><h2 id="변수-대소문자"><a href="#변수-대소문자" class="headerlink" title="변수 대소문자"></a>변수 대소문자</h2><p>변수이름은 대소문자를 구분합니다.<br>다음과 같이 두개의 변수가 생성됩니다.<br>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">3</span>A = <span class="hljs-number">4</span><span class="hljs-built_in">print</span>(a)<span class="hljs-built_in">print</span>(A)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">34</code></pre></div><h2 id="변수-유형-Type-확인"><a href="#변수-유형-Type-확인" class="headerlink" title="변수 유형(Type) 확인"></a>변수 유형(Type) 확인</h2><p><code>type()</code>은 변수의 데이터 유형을 확인할 수 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>b = <span class="hljs-string">&#x27;hello&#x27;</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(a))<span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(b))</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">&lt;class &#x27;int&#x27;&gt;&lt;class &#x27;str&#x27;&gt;</code></pre></div><h2 id="형변환-Casting"><a href="#형변환-Casting" class="headerlink" title="형변환(Casting)"></a>형변환(Casting)</h2><p>변수의 타입을 변경할 수 있습니다.<br><code>str()</code> 은 문자, <code>int()</code>는 숫자, <code>float()</code> 은 실수로 변경하는 함수입니다.</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>)b = <span class="hljs-built_in">int</span>(<span class="hljs-string">&#x27;5&#x27;</span>)c = <span class="hljs-built_in">float</span>(<span class="hljs-number">5</span>)<span class="hljs-built_in">print</span>(a, <span class="hljs-built_in">type</span>(a))<span class="hljs-built_in">print</span>(b, <span class="hljs-built_in">type</span>(b))<span class="hljs-built_in">print</span>(c, <span class="hljs-built_in">type</span>(c))</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<h1 id="첫번째-프로그램"><a href="#첫번째-프로그램" class="headerlink" title="첫번째 프로그램"></a>첫번째 프로그램</h1><p>‘hello world’ 문자열을 출력하는 프로그램을 작성하겠습니다.</p><p><code>example.py</code> 파일을 만듭니다.<br>아래와 같이 입력하고 실행합니다.</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello, World!&#x27;</span>)</code></pre></div><p>터미널에서 <code>python example.py</code> 명령으로 실행합니다.</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-comment"># result</span>Hello, World!</code></pre></div>]]></content>
     
     
     <categories>
@@ -73,11 +115,11 @@
   
   
   <entry>
-    <title>첫번째 프로그램</title>
-    <link href="/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%B2%AB%EB%B2%88%EC%A7%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/"/>
-    <url>/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EC%B2%AB%EB%B2%88%EC%A7%B8%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</url>
+    <title>변수</title>
+    <link href="/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EB%B3%80%EC%88%98/"/>
+    <url>/2022/10/13/Python/Python/01%EA%B0%9C%EC%9A%94/%EB%B3%80%EC%88%98/</url>
     
-    <content type="html"><![CDATA[<h1 id="첫번째-프로그램"><a href="#첫번째-프로그램" class="headerlink" title="첫번째 프로그램"></a>첫번째 프로그램</h1><p>‘hello world’ 문자열을 출력하는 프로그램을 작성하겠습니다.</p><p><code>example.py</code> 파일을 만듭니다.<br>아래와 같이 입력하고 실행합니다.</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello, World!&#x27;</span>)</code></pre></div><p>터미널에서 <code>python example.py</code> 명령으로 실행합니다.</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-comment"># result</span>Hello, World!</code></pre></div>]]></content>
+    <content type="html"><![CDATA[<h1 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h1><p>변수는 값을 할당하여 데이터를 저장할 수 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>b = <span class="hljs-string">&#x27;hello&#x27;</span><span class="hljs-built_in">print</span>(a)<span class="hljs-built_in">print</span>(b)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs py"><span class="hljs-number">5</span>hello</code></pre></div><h2 id="변수-유형-Type-선언"><a href="#변수-유형-Type-선언" class="headerlink" title="변수 유형(Type) 선언"></a>변수 유형(Type) 선언</h2><p>파이썬은 어떤 타입의 데이터가 들어갈지 선언할 필요가 없으며,<br>선언 후 다른 타입으로 변경할 수도 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>a = <span class="hljs-string">&#x27;Five&#x27;</span><span class="hljs-built_in">print</span>(a)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">Five</code></pre></div><h2 id="문자열-String"><a href="#문자열-String" class="headerlink" title="문자열(String)"></a>문자열(String)</h2><p>문자 여러개가 나열된것을 문자열이라고 합니다.<br>홑따옴표(작은따옴표), 쌍따옴표(큰따옴표) 모두 사용 가능합니다</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-string">&quot;hello&quot;</span>a = <span class="hljs-string">&#x27;hello&#x27;</span></code></pre></div><h2 id="변수-대소문자"><a href="#변수-대소문자" class="headerlink" title="변수 대소문자"></a>변수 대소문자</h2><p>변수이름은 대소문자를 구분합니다.<br>다음과 같이 두개의 변수가 생성됩니다.<br>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">3</span>A = <span class="hljs-number">4</span><span class="hljs-built_in">print</span>(a)<span class="hljs-built_in">print</span>(A)</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">34</code></pre></div><h2 id="변수-유형-Type-확인"><a href="#변수-유형-Type-확인" class="headerlink" title="변수 유형(Type) 확인"></a>변수 유형(Type) 확인</h2><p><code>type()</code>은 변수의 데이터 유형을 확인할 수 있습니다.</p><p>Example</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-number">5</span>b = <span class="hljs-string">&#x27;hello&#x27;</span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(a))<span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(b))</code></pre></div><p>Result</p><div class="code-wrapper"><pre><code class="hljs shell">&lt;class &#x27;int&#x27;&gt;&lt;class &#x27;str&#x27;&gt;</code></pre></div><h2 id="형변환-Casting"><a href="#형변환-Casting" class="headerlink" title="형변환(Casting)"></a>형변환(Casting)</h2><p>변수의 타입을 변경할 수 있습니다.<br><code>str()</code> 은 문자, <code>int()</code>는 숫자, <code>float()</code> 은 실수로 변경하는 함수입니다.</p><div class="code-wrapper"><pre><code class="hljs py">a = <span class="hljs-built_in">str</span>(<span class="hljs-number">5</span>)b = <span class="hljs-built_in">int</span>(<span class="hljs-string">&#x27;5&#x27;</span>)c = <span class="hljs-built_in">float</span>(<span class="hljs-number">5</span>)<span class="hljs-built_in">print</span>(a, <span class="hljs-built_in">type</span>(a))<span class="hljs-built_in">print</span>(b, <span class="hljs-built_in">type</span>(b))<span class="hljs-built_in">print</span>(c, <span class="hljs-built_in">type</span>(c))</code></pre></div>]]></content>
     
     
     <categories>
@@ -232,7 +274,7 @@
     <link href="/2022/10/10/Linux/Apache/Apache%20%EB%AA%85%EB%A0%B9%EC%96%B4/"/>
     <url>/2022/10/10/Linux/Apache/Apache%20%EB%AA%85%EB%A0%B9%EC%96%B4/</url>
     
-    <content type="html"><![CDATA[<h1 id="Apache-버전-확인하기"><a href="#Apache-버전-확인하기" class="headerlink" title="Apache 버전 확인하기"></a>Apache 버전 확인하기</h1><div class="code-wrapper"><pre><code class="hljs shell">apache2 -v[result]Server version: Apache/2.4.52 (Ubuntu)Server built:   2022-06-14T12:30:21</code></pre></div><h1 id="Apache-환경설정-변경하기"><a href="#Apache-환경설정-변경하기" class="headerlink" title="Apache 환경설정 변경하기"></a>Apache 환경설정 변경하기</h1><div class="code-wrapper"><pre><code class="hljs awk">sudo vi <span class="hljs-regexp">/etc/</span>apache2/apache2.conf</code></pre></div><h1 id="Apache-서비스-재시작하기"><a href="#Apache-서비스-재시작하기" class="headerlink" title="Apache 서비스 재시작하기"></a>Apache 서비스 재시작하기</h1><div class="code-wrapper"><pre><code class="hljs maxima">sudo service apache2 <span class="hljs-built_in">restart</span></code></pre></div>]]></content>
+    <content type="html"><![CDATA[<h1 id="Apache-버전-확인하기"><a href="#Apache-버전-확인하기" class="headerlink" title="Apache 버전 확인하기"></a>Apache 버전 확인하기</h1><div class="code-wrapper"><pre><code class="hljs bash">apache2 -v[result]Server version: Apache/2.4.52 (Ubuntu)Server built:   2022-06-14T12:30:21</code></pre></div><h1 id="Apache-환경설정-변경하기"><a href="#Apache-환경설정-변경하기" class="headerlink" title="Apache 환경설정 변경하기"></a>Apache 환경설정 변경하기</h1><div class="code-wrapper"><pre><code class="hljs bash">sudo vi /etc/apache2/apache2.conf</code></pre></div><h1 id="Apache-서비스-재시작하기"><a href="#Apache-서비스-재시작하기" class="headerlink" title="Apache 서비스 재시작하기"></a>Apache 서비스 재시작하기</h1><div class="code-wrapper"><pre><code class="hljs bash">sudo service apache2 restart</code></pre></div>]]></content>
     
     
     <categories>
