@@ -226,15 +226,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/13.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20splice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
-          13. 배열에서 splice 사용하기
+        <a href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
+          17. url, querystring 모듈
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/13.%20%EB%B0%B0%EC%97%B4%EC%97%90%EC%84%9C%20splice%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
         <div>
-          배열에서 splice 사용하기 // 배열에서 splice 사용하기  var users = [     &#123; name: &#x27;홍길동1&#x27;, age: 22 &#125;,     &#123; name: &#x27;홍길동2&#x27;, age: 24 &#125;,     &#123; name: &#x27;홍길동3&#x27;, age: 29 &#1
+          url, querystring 모듈 // url 모듈 : url 주소를 분석합니다 var url = require(&#x27;url&#x27;)  var urlStr =     &#x27;https://search.naver.com/search.naver?sm=top_hty&amp;fbm=1&amp;ie=utf8&amp;query=popcorn&#x27;
         </div>
       </a>
 
@@ -294,15 +294,83 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/19.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20on%20emit%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
-          19. 이벤트 on, emit 사용하기
+        <a href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" target="_self">
+          15. callback 함수
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/19.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20on%20emit%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/15.%20callback%20%ED%95%A8%EC%88%98/" target="_self">
         <div>
-          이벤트 on, emit 사용하기 // 이벤트 on, emit 사용하기 // emit으로 보내고 on으로 받음  process.on(&#x27;tick&#x27;, function(count) &#123;     console.log(&#x27;tick 이벤트 발생함: &#x27; + count) &#125;)  setTimeout(function() &#1
+          callback 함수 // callback 함수  function add(a, b, callback) &#123;     var result = a + b     callback(result) &#125;  add(10, 20, function(result) &#123;     console.log(&#x27;더하기 결과(콜백함수 안에서): &#x27; +
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-28 00:00" pubdate>
+              2019-10-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Before/" class="category-chain-item">Before</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          18. 이벤트 사용하기
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+        <div>
+          이벤트 사용하기 // 이벤트 사용하기  process.on(&#x27;exit&#x27;, function() &#123;     console.log(&#x27;exit 이벤트 발생함.&#x27;) &#125;)  setTimeout(function() &#123;    console.log(&#x27;2초 후에 실행 되었음&#x27;)    proces
         </div>
       </a>
 
@@ -498,15 +566,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
-          18. 이벤트 사용하기
+        <a href="/2019/10/28/Before/Javascript/Node/19.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20on%20emit%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+          19. 이벤트 on, emit 사용하기
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/18.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/19.%20%EC%9D%B4%EB%B2%A4%ED%8A%B8%20on%20emit%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          이벤트 사용하기 // 이벤트 사용하기  process.on(&#x27;exit&#x27;, function() &#123;     console.log(&#x27;exit 이벤트 발생함.&#x27;) &#125;)  setTimeout(function() &#123;    console.log(&#x27;2초 후에 실행 되었음&#x27;)    proces
+          이벤트 on, emit 사용하기 // 이벤트 on, emit 사용하기 // emit으로 보내고 on으로 받음  process.on(&#x27;tick&#x27;, function(count) &#123;     console.log(&#x27;tick 이벤트 발생함: &#x27; + count) &#125;)  setTimeout(function() &#1
         </div>
       </a>
 
@@ -634,15 +702,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
-          17. url, querystring 모듈
+        <a href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
+          01. 형변환 하기
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/28/Before/Javascript/Node/17.%20url,%20querystring%20%EB%AA%A8%EB%93%88/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
         <div>
-          url, querystring 모듈 // url 모듈 : url 주소를 분석합니다 var url = require(&#x27;url&#x27;)  var urlStr =     &#x27;https://search.naver.com/search.naver?sm=top_hty&amp;fbm=1&amp;ie=utf8&amp;query=popcorn&#x27;
+          형변환 하기 &lt;html&gt; &lt;head&gt;     &lt;script&gt;         alert(typeof Number(&#x27;234&#x27;))     &lt;/script&gt; &lt;/head&gt; &lt;/html&gt;
         </div>
       </a>
 
@@ -650,8 +718,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-28 00:00" pubdate>
-              2019-10-28
+            <time datetime="2019-10-27 00:00" pubdate>
+              2019-10-27
             </time>
           </div>
         
@@ -674,13 +742,6 @@
   <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/Node/" class="category-chain-item">Node</a>
-  
-  
-
-  
 
   
 
@@ -702,15 +763,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2019/10/27/Before/Javascript/03%20%EB%B0%B0%EC%97%B4/" target="_self">
-          03. 배열
+        <a href="/2019/10/27/Before/Javascript/04%20%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90/" target="_self">
+          04. 삼항연산자
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/03%20%EB%B0%B0%EC%97%B4/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/04%20%EC%82%BC%ED%95%AD%EC%97%B0%EC%82%B0%EC%9E%90/" target="_self">
         <div>
-          배열 &lt;html&gt; &lt;head&gt;     &lt;script&gt;         var array = [10, 20, 30, 40, 50];         alert(array);         alert(array[0]);         alert(array[1]);         alert(array[2]);         alert
+          삼항연산자 &lt;html&gt; &lt;head&gt;     &lt;script&gt;         var input = prompt(&#x27;숫자를 입력해주세요&#x27;, &#x27;&#x27;)         var number = Number(input)          (number &gt; 0) ? alert(&#x27;자연수입니다&#x2
         </div>
       </a>
 
@@ -772,67 +833,6 @@
       <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/02%20prompt%20confirm/" target="_self">
         <div>
           prompt : 입력값을 받을수 있습니다confirm: 확인 취소 버튼을 표시합니다 &lt;html&gt; &lt;head&gt;     &lt;script&gt;         var output = prompt(&#x27;메시지&#x27;, &#x27;디폴트&#x27;)         alert(output)          var output2 = c
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-27 00:00" pubdate>
-              2019-10-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Before/" class="category-chain-item">Before</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Before/Javascript/" class="category-chain-item">Javascript</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
-          01. 형변환 하기
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2019/10/27/Before/Javascript/01%20%ED%98%95%EB%B3%80%ED%99%98%20%ED%95%98%EA%B8%B0/" target="_self">
-        <div>
-          형변환 하기 &lt;html&gt; &lt;head&gt;     &lt;script&gt;         alert(typeof Number(&#x27;234&#x27;))     &lt;/script&gt; &lt;/head&gt; &lt;/html&gt;
         </div>
       </a>
 
